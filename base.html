@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="layout">
+
+<div class="sidebar">
+<h2>⚡ TaskFlow</h2>
+<p>{{ username }}</p>
+
+<a href="/dashboard">Tasks</a>
+<a href="/profile">Profile</a>
+<a href="/logout">Logout</a>
+</div>
+
+<div class="main">
+{% block content %}{% endblock %}
+</div>
+
+</div>
+
+</body>
+</html>

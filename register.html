@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth">
+
+<div class="card">
+    <h2>📝 Create Account</h2>
+
+    <form method="POST">
+        <input name="username" placeholder="Choose username" required>
+        <input name="password" type="password" placeholder="Create password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <p class="switch">
+        Already have an account?
+        <a href="/login">Login</a>
+    </p>
+</div>
+
+</body>
+</html>

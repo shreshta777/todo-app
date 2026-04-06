@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Your Tasks</h1>
+
+<div class="input-box">
+<input id="task" placeholder="New task">
+<input type="date" id="date">
+<button onclick="addTask()">+</button>
+</div>
+
+{% for t in tasks %}
+<div class="task {% if t[4]==1 %}done{% endif %}">
+<span>{{ t[2] }} ({{ t[3] }})</span>
+
+<div>
+<button onclick="toggleTask({{t[0]}})">✔</button>
+<button onclick="deleteTask({{t[0]}})">✖</button>
+</div>
+</div>
+{% endfor %}
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

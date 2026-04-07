@@ -13,9 +13,8 @@ def get_db():
         password=os.environ.get("DB_PASSWORD"),
         database=os.environ.get("DB_NAME"),
         port=int(os.environ.get("DB_PORT")),
-        ssl_disabled=False
+        connection_timeout=5
     )
-
 
 # HOME
 @app.route('/')
